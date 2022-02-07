@@ -10,7 +10,7 @@ namespace OopProperties
             p.FirstName = "John";
             p.LastName = "Doe";
             p.SayHello();
-            // Console.WriteLine($"{p.CNP}");
+            Console.WriteLine($"{p.FullName}");
         }
     }
 }

@@ -8,42 +8,37 @@ namespace OopProperties
 {
     public class Person
     {
-        private string firstName = string.Empty;
-        private string lastName = string.Empty;
-        private string cnp;
-        private DateTime dateOfBirth;
-
         public Person(string cnp, DateTime dateOfBirth)
         {
-            this.cnp = cnp;
-            this.dateOfBirth = dateOfBirth;
+            this.CNP = cnp;
+            this.DateOfBirth = dateOfBirth;
         }
 
-        public string FirstName 
-        {
-            get { return firstName; }
-            set { firstName = value ?? string.Empty; }
-        }
+        public string FirstName { get; set; } = string.Empty;
 
-        public string LastName 
+        public string LastName { get; set; } = string.Empty;
+
+        public string FullName
         {
-            get { return lastName; }
-            set { lastName = value ?? string.Empty; }
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
         }
 
         public string CNP 
         {
-            get { return cnp; }
+            get;
         }
 
         public DateTime DateOfBirth 
         {
-            get { return dateOfBirth; }
+            get;
         }
 
         public void SayHello()
         {
-            Console.WriteLine($"Hello, my name is {FirstName} {LastName}");
+            Console.WriteLine($"Hello, my name is {FullName}");
             Console.WriteLine($"My CNP is {CNP}");
             Console.WriteLine($"My date of birth is {DateOfBirth}");
         }
