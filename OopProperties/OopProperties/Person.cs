@@ -42,5 +42,10 @@ namespace OopProperties
             Console.WriteLine($"My CNP is {CNP}");
             Console.WriteLine($"My date of birth is {DateOfBirth}");
         }
+
+        public int GetAge(DateTime referenceDate)
+        {
+            return referenceDate.Year - DateOfBirth.Year;
+        }
     }
 }

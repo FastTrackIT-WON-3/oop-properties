@@ -6,6 +6,14 @@ namespace OopProperties
     {
         static void Main(string[] args)
         {
+            Address address = new Address();
+            address.Country = "Romania";
+            address.State = "Cluj";
+            address.City = "Cluj-Napoca";
+
+            Console.WriteLine(address[AddressPart.Country]);
+
+            /*
             int[] array = new[] { 1, 2, 3, 4, 5 };
             MyCollection collection = new MyCollection(array);
             Console.WriteLine(collection[1]);
